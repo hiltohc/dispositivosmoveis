@@ -36,8 +36,11 @@ const styles = StyleSheet.create({
   container:{
     backgroundColor: "#f0f0f0",
     padding: 8,
-    borderRadius: 4,
+    borderRadius: 14,
     marginBottom: 14,
+    flex: 1,
+    padding: 20,
+    justifyContent: 'center',
   },
   item:{
     color: "#000",
@@ -47,7 +50,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#B3261E",
     alignSelf: "flex-start",
     padding: 4,
-    borderRadius: 4,
+    borderRadius: 14,
     marginTop: 16
   },
   buttonText: {
@@ -59,7 +62,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#000",
     alignSelf: "flex-start",
     padding: 4,
-    borderRadius: 4,
+    borderRadius: 14,
     marginTop: 16
   }
 })
