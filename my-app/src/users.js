@@ -17,7 +17,7 @@ export function UsersList({ data, handleEdit }){
 
   return(
     <View style={styles.container}>
-      <Text style={styles.item}>Nome: {data.nome}</Text>
+      <Text style={styles.item}>Produto: {data.nome}</Text>
       <Text style={styles.item}>Quantidade: {data.quantidade}</Text>
       <Text style={styles.item}>Descricao: {data.descricao}</Text>
 
