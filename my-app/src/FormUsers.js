@@ -38,28 +38,7 @@ export function FormUsers() {
     })
 
 
-    // getDocs(usersRef)
-    // .then((snapshot) => {
-    //   let lista = [];
-
-    //   snapshot.forEach((doc) => {
-    //     lista.push({
-    //       id: doc.id,
-    //       nome: doc.data().nome,
-    //       idade: doc.data().idade,
-    //       cargo: doc.data().cargo
-    //     })
-    //   })
-
-    //   setUsers(lista);
-
-    // })
-    // .catch((err) => {
-    //   console.log(err);
-    // })
-
-
-
+    
     }
 
 
@@ -121,18 +100,20 @@ export function FormUsers() {
   <View style={styles.container}>
     { showForm && (
       <View>
-        <Text style={styles.label}>Nome:</Text>
+        <Text style={styles.label}>Produto :</Text>
         <TextInput
           style={styles.input}
-          placeholder="Digite seu nome..."
+          placeholder="  Digite seu nome..."
+          placeholderTextColor="#999999"
           value={nome}
           onChangeText={ (text) => setNome(text) } 
         />
 
-        <Text style={styles.label}>quantidade:</Text>
+        <Text style={styles.label}>Quantidade:</Text>
         <TextInput
           style={styles.input}
-          placeholder="Digite sua quantidade..."
+          placeholder=" Digite sua quantidade..."
+          placeholderTextColor="#999999"
           value={quantidade}
           onChangeText={ (text) => setQuantidade(text) } 
         />
@@ -140,7 +121,8 @@ export function FormUsers() {
         <Text style={styles.label}>Descricao:</Text>
         <TextInput
           style={styles.input}
-          placeholder="Digite o sua descricao ..."
+          placeholder=" Digite o sua descricao ..."
+          placeholderTextColor="#999999"
           value={descricao}
           onChangeText={ (text) => setDescricao(text) } 
         />
@@ -165,7 +147,7 @@ export function FormUsers() {
 
 
     <Text style={{ marginTop: 14, marginLeft: 8, fontSize: 20, color: "#000"}}>
-      Usuários:
+      Produtos:
     </Text>
 
     <FlatList
@@ -185,40 +167,51 @@ export function FormUsers() {
 
 const styles = StyleSheet.create({
   container:{
-    flex:1, 
+    flex: 1,
+    padding: 20,
+    backgroundColor: 'linear-gradient(180deg, #A1C4FD 0%, #C2E9FB 100%)', // Fundo gradiente
+    borderRadius: 10,
+    marginBottom: 20, 
   },
   button:{
-    backgroundColor: "#000",
-    marginLeft: 8,
-    marginRight: 8,
+    backgroundColor: '#007BFF', // Cor de fundo do botão
+    paddingVertical: 10,
+    borderRadius: 20, // Define o quão arredondado o botão será
+    alignItems: 'center',
   },
   buttonText:{
     padding: 8,
     color: "#FFF",
     textAlign: 'center'
+    
   },
   label:{
-    color: "#000", 
-    fontSize: 18, 
-    marginBottom: 4,
-    marginLeft: 8,
+    fontSize: 18, // Aumenta o tamanho da fonte
+    fontWeight: 'bold', // Deixa o texto em negrito
+    color: '#333', // Cor mais escura para um melhor contraste
+    marginBottom: 8, // Adiciona um pequeno espaçamento abaixo da label
+    letterSpacing: 0.5, // Espaçamento entre as letras
+    textTransform: 'uppercase', // Deixa o texto em letras maiúsculas para destaque
   },
   input:{
     borderWidth: 1,
+    borderRadius: 8,
     marginLeft: 8,
     marginRight: 8,
     marginBottom: 8,
   },
+  
   list:{
     marginTop: 8,
     marginLeft: 8,
     marginRight: 8,
+    borderRadius: 20
   },
   buttonLogout:{
     backgroundColor: 'red',
     alignSelf: "flex-start",
     margin: 14,
     padding: 8,
-    borderRadius: 4
+    borderRadius: 14
   }
 })
